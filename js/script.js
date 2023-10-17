@@ -13,6 +13,7 @@ altrimenti
 stampo
  */
 AlwaysEven();
+
 function AlwaysEven(){
 
     const btn = document.querySelector('button');
@@ -26,16 +27,19 @@ function AlwaysEven(){
        let msg;
        let numeroInserito = parseInt(inputEl.value);
        resetForm();
+
        if(!isNaN(numeroInserito)){
             msg = (isEven(numeroInserito)) ? numeroInserito : numeroInserito + 1;
             //alertColor = 'alert-success';
        } else {
            //alertColor = 'alert-danger';
-           msg = 'Non hai inseriro un numero'
+            msg = 'Non hai inseriro un numero'
       }
+
        printResult(msg);
     
     }
+
     function printResult(message){
         let alertColor = isNaN(message) ? 'alert-danger' : 'alert-success';
         //const resultEl = document.querySelector('.alert');
