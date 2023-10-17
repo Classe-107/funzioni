@@ -19,7 +19,7 @@ function AlwaysEven(){
 
 
     btn.addEventListener('click', printAlwaysEven);
-    
+    const resultEl = document.querySelector('.alert');
     
     function printAlwaysEven(){
     
@@ -40,14 +40,14 @@ function AlwaysEven(){
     
     }
     function printResult(alertColor,message){
-        const resultEl = document.querySelector('.alert');
+        //const resultEl = document.querySelector('.alert');
         resultEl.classList.add(alertColor);
         resultEl.classList.remove('d-none');
         resultEl.innerText = message;
     }
       
     function resetForm(){
-        const resultEl = document.querySelector('.alert');
+        //const resultEl = document.querySelector('.alert');
         resultEl.classList.remove('alert-danger');
         resultEl.classList.remove('alert-success');
         resultEl.classList.add('d-none');
