@@ -35,7 +35,7 @@ function AlwaysEven(){
     btn.addEventListener('click', printAlwaysEven);
 
     /**
-     * Funzione che parte al click sul bottone passata come callback al bottone
+     * Funzione che parte al click sul bottone passata come callback all'eventlistener del bottone
      */
     function printAlwaysEven(){
        
