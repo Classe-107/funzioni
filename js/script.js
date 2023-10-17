@@ -16,30 +16,28 @@ AlwaysEven();
 function AlwaysEven(){
 
     const btn = document.querySelector('button');
-
+    const resultEl = document.querySelector('.alert');
+    const inputEl = document.getElementById('data');
 
     btn.addEventListener('click', printAlwaysEven);
-    const resultEl = document.querySelector('.alert');
-    
+
     function printAlwaysEven(){
-    
-        resetForm();
-    
-        const inputEl = document.getElementById('data');
-        let alertColor;
-        let msg;
+        //let alertColor;
+       let msg;
        let numeroInserito = parseInt(inputEl.value);
+       resetForm();
        if(!isNaN(numeroInserito)){
             msg = (isEven(numeroInserito)) ? numeroInserito : numeroInserito + 1;
-            alertColor = 'alert-success';
+            //alertColor = 'alert-success';
        } else {
-           alertColor = 'alert-danger';
+           //alertColor = 'alert-danger';
            msg = 'Non hai inseriro un numero'
       }
-       printResult(alertColor,msg);
+       printResult(msg);
     
     }
-    function printResult(alertColor,message){
+    function printResult(message){
+        let alertColor = isNaN(message) ? 'alert-danger' : 'alert-success';
         //const resultEl = document.querySelector('.alert');
         resultEl.classList.add(alertColor);
         resultEl.classList.remove('d-none');
@@ -48,6 +46,7 @@ function AlwaysEven(){
       
     function resetForm(){
         //const resultEl = document.querySelector('.alert');
+        inputEl.value = '';
         resultEl.classList.remove('alert-danger');
         resultEl.classList.remove('alert-success');
         resultEl.classList.add('d-none');
