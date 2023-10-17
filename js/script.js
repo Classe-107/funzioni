@@ -39,14 +39,14 @@ function AlwaysEven(){
      */
     function printAlwaysEven(){
        
-     // variabili messaggio da stampare e valore inserito dall'utente
+     // variabili: messaggio da stampare e valore inserito dall'utente
        let msg;
        let numeroInserito = parseInt(inputEl.value);
 
        //resetto il form allo stato iniziale
        resetForm();
 
-       //controllo che il valore inseerito sia un numero
+       //controllo che il valore inserito sia un numero
        if(!isNaN(numeroInserito)){
 
         //se il valore inserito è un numero metto in msg il valore o il valore aumentato di uno se è dispari
